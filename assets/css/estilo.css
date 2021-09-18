@@ -1,34 +1,103 @@
 body {
-    margin: 0;
+    background-color: black;
 }
-
-/** MENU */
-.menu-item {
-    list-style: none;
-    height: 30px;
-    padding: 5px;
-    display: inline-block;
-}
-
-.menu-item a {
-    color: green;
-    background-color: white;
-    text-decoration: none;
-    transition: all .2s linear;
-}
-
-.menu-item a:hover {
-    color: white;
-    background-color: green;
-}
-
-.menu-link {
-    color: black;
-}
-
-/** CABEÇALHO */
 
 #cabecalho {
     height: 100vh;
+    width: 100vw;
     background-color: green;
 }
+
+/* ANIMAÇÕES - WEBKIT */
+
+@-webkit-keyframes whiteToGreen{
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: green;
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media(min-width: 992px) {
+    body {
+        margin: 0;
+        background-color: brown;
+    }
+    
+    /** MENU */
+    .menu-item {
+        list-style: none;
+        height: 30px;
+        padding: 5px;
+        display: inline-block;
+    }
+    
+    .menu-item a {
+        color: green;
+        background-color: white;
+        text-decoration: none;
+        transition: all .2s linear;
+    }
+    
+    .menu-item a:hover {
+        color: white;
+        background-color: green;
+    }
+    
+    .menu-link {
+        color: black;
+    }
+    
+    /** CABEÇALHO */
+    
+    #cabecalho {
+        height: 100vh;
+        background-color: green;
+    }
+    
+    .animate-scale {
+        transition: all .2s linear;
+        animation: scaleDiv .5s;
+        animation-delay: 1s;
+    }
+    
+    .animate-whiteToGreen {
+        transition: all .2s linear;
+        animation: whiteToGreen .5s;
+    }
+
+    /** ANIMAÇÕES  */
+    @keyframes scaleDiv {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    @keyframes whiteToGreen{
+        from {
+            background-color: white;
+        }
+        to {
+            background-color: green;
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    body {
+        background-color: cyan;
+    }
+}
+
+@media(min-width: 1400px) {
+    body {
+        background-color: darkgoldenrod;
+    }
+}
+
+  
