@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+/** MENU */
+.menu-item {
+    list-style: none;
+    height: 30px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.menu-item a {
+    color: green;
+    background-color: white;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+.menu-item a:hover {
+    color: white;
+    background-color: green;
+}
+
+.menu-link {
+    color: black;
+}
+
+/** CABEÇALHO */
+
+#cabecalho {
+    height: 100vh;
+    background-color: green;
+}
